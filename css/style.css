@@ -35,7 +35,9 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*Обнуление*/
+/*===============*/
+
+/*общие стили*/
 
 .header__row {
 	display: flex;
@@ -54,6 +56,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+/*HEADER*/
 
 .header {
 	position: fixed;
@@ -96,7 +100,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .business {
 	background-color: #709dca;
-	padding: 100px 0 100px 0;
+	padding: 100px 0 0px 0;
+	margin: 0 0 70px 0;
 }
 .business__body {
 
@@ -126,7 +131,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 0px 0 15px 0;
+	margin: 0px 0 0px 0;
 }
 .form__header-line {
 	margin: 0 10px 0 0;
@@ -162,7 +167,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .compucter {
 	background: url(../img/slider/pc.png) 50%/650px no-repeat;
 	padding: 40px 0;
+	transform: translate(0px, 75px);
+    margin: -65px 0 0 0;
 }
+
+/*SLIDER*/
+
 .slider {
 	min-width: 0;
 	max-width: 455px;
@@ -197,17 +207,96 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	font-size: 0;
 	width: 10px;
 	height: 10px;
-	background-color: #fff;
+	background-color: transparent;
+	border: 1px solid #dedfe0;
 	border-radius: 50%;
 }
 .slider .slick-dots li.slick-active button{
 	background-color: transparent;
-	border: 1px solid #fff;
+	border: 1px solid #1ca8dd;
 }
 .slider__item {	
 }
 .slider__item img {
 	max-width: 100%;
+}
+
+/*SERVICES*/
+
+.services {
+	padding: 100px 0;
+}
+.services__title {
+	margin: 0 0 40px 0;
+}
+.title {
+	text-align: center;
+}
+.service__title-h2 {
+	color: #394b50;
+}
+.h2title {
+	font-size: 30px;
+	font-family: "Gotham";
+	text-transform: uppercase;
+	line-height: 30px;
+	text-align: center;
+	font-weight: 700;
+}
+.service__title-subtitle {}
+.subtitle {
+	font-size: 20px;
+	font-family: "Gotham";
+	line-height: 30px;
+	text-align: center;
+	font-weight: 400;
+}
+.services__row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.services__column {
+	flex: 0 1 50%;
+    margin: 0 0 20px 0;
+    padding: 0 10px 0 0;
+}
+.services__item {
+	display: flex;
+	justify-content: flex-start;
+}
+.services__item__row {
+	display: flex;
+}
+.services__item-ico {
+	flex: 0 0 65px;
+}
+.services__item-body {
+	flex: 1 1 auto;
+	padding: 0 10px 0 10px;
+}
+.services__item-body-title {
+	font-size: 17px;
+	font-family: "Lato";
+	color: #394b50;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 20px;
+	margin: 0 0 10px 0;
+}
+.services__item-body-text {
+	color: #7b7b7b;
+	font-size: 15px;
+	font-family: "Myriad Pro";
+	line-height: 20px;
+}
+img.hid {
+	display: none;
+}
+.services__item__row:hover img.vis {
+	display: none;
+}
+.services__item__row:hover img.hid {
+	display: block;
 }
 
 @media (max-width: 1100px) {
@@ -291,12 +380,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 @media (max-width: 767px) {
+	.compucter {
+	    transform: translate(0px, 0px);
+	    margin: 0;
+	}
 	.form__header {
 		display: block;
 		margin: 0px 0 25px 0;
 	}
 	.form__header-line {
 		margin: 0 0 10px 0;
+	}
+	.slider .slick-dots li.slick-active button{
+		background-color: #dedfe0;
+		border: 1px solid #dedfe0;
 	}
 	.compucter {
 		background: none;
@@ -311,6 +408,40 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	    top: 15px;
 	}
 	.business {
-	    padding: 80px 0 60px 0;
+	    padding: 90px 0 60px 0;
+	    margin: 0;
+	}
+	.services {
+	    padding: 40px 0;
+	}
+	.services__column {
+    	flex: 0 1 100%;
+    	padding: 0;
+	}
+	.services__item-body-text {
+	    font-size: 18px;
+	}
+	.services__item__row {
+	    /*flex-direction: column;*/
+	    align-items: center;
+	}
+	.services__item-body {
+	    /*text-align: center;*/
+	    padding: 0 0px 0 15px;
+	}
+	img.vis {
+		width: 60px;
+	}
+	img.vis_fix {
+		width: 45px;
+	}
+	.services__item__row:hover img.vis {
+		display: inline-block;
+	}
+	.services__item__row:hover img.hid {
+		display: none;
+	}
+	.services__item-ico {
+	    text-align: center;
 	}
 }
