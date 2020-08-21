@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .content {
 }
 .container {
-	max-width: 1167px;
+	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -156,13 +156,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	display: inline-block;
 	padding: 0px 45px;
 	height: 50px;
-	line-height: 50px;
 	background-color: #ffbb42;
 	text-transform: uppercase;
 	font-size: 18px;
 	color: #fff;
 	border-radius: 3px;
 	width: 100%;
+	text-align: center;
 }
 .compucter {
 	background: url(../img/slider/pc.png) 50%/650px no-repeat;
@@ -299,10 +299,72 @@ img.hid {
 	display: block;
 }
 
+/*ABOUT*/
+
+.about {
+	display: flex;
+	overflow: hidden;
+	background-color: #ffc155;
+}
+
+.about__content {
+	flex: 0 0 100%;
+	display: flex;
+}
+.about__container {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+.about__body {
+	width: 50%;
+	padding: 50px 35px 50px 100px;
+}
+.about__body-title {
+	color: #fff;
+	margin: 0 0 20px 0;
+	text-align: left;
+}
+.about__body-text {
+	color: #fff;
+	font-size: 15px;
+	font-family: "OpenSans";
+	line-height: 20px;
+	margin: 0 0 20px 0;
+}
+.about__body-button {}
+.about__body-btn {
+	max-width: 200px;
+	background-color: #fff;
+	color: #ffbb42;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.about_img {
+	flex: 0 0 50%;
+	position: relative;
+	padding: 0 0 35% 0;
+}
+.about_img img {
+	max-width: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
 @media (max-width: 1100px) {
 	.btn {
 		padding: 0px 15px;
-		line-height: 20px;
+	}
+	.about__body-btn {
+
+	}
+	.about__body {
+	    padding: 50px 35px 50px 40px;
 	}
 }
 
@@ -408,11 +470,11 @@ img.hid {
 	    top: 15px;
 	}
 	.business {
-	    padding: 90px 0 60px 0;
+	    padding: 90px 0 40px 0;
 	    margin: 0;
 	}
 	.services {
-	    padding: 40px 0;
+	    padding: 25px 0 20px 0;
 	}
 	.services__column {
     	flex: 0 1 100%;
@@ -443,5 +505,27 @@ img.hid {
 	}
 	.services__item-ico {
 	    text-align: center;
+	}
+	.about {
+	    flex-direction: column;
+	}
+	.about__body {
+	    width: 100%;
+	    padding: 25px 0px 20px 0px;
+	}
+	.about__body-title {
+	    text-align: center;
+	}
+	.about__body-btn {
+	    margin: 0 auto;
+	}
+	.about__body-text {
+	    font-size: 18px;
+	}
+}
+
+@media (max-width: 400px) {
+	.about_img {
+	    display: none;
 	}
 }
