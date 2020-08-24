@@ -360,7 +360,7 @@ img.hid {
 
 .price {
 	background-color: #e7edf3;
-	padding: 130px 0 150px 0;
+	padding: 130px 0 90px 0;
 }
 .price__row {
 	display: flex;
@@ -460,6 +460,66 @@ p.b2 {
 	max-width: 150px;
 	margin: 0 auto;
 	font-size: 16px;
+}
+
+/*HOW*/
+
+.how {
+	padding: 75px 0;
+}
+.how__title {
+	margin: 0 0 75px 0;
+}
+.how__title-h2 {
+	color: #394b50;
+}
+.how__title-subtitle {
+	color: #394b50;
+}
+.how__row {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 60px;
+}
+.how__column {
+	flex: 0 1 18%;
+}
+.arrow {
+	flex: 0 1 10%;
+	margin: -30px -10px 0 -10px;
+}
+.arrow-bottom {
+	align-items: center;
+    display: flex;
+}
+.how__item {}
+.how__item-top {
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+.how__item-bottom {
+	text-align: center;
+}
+.how__item-bottom-title {
+	font-size: 20px;
+	font-family: "Lato";
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #394b50;
+	margin: 0 0 20px;
+	}
+.how__item-bottom-text {}
+.how__item-button {}
+.how__btn {
+	padding: 0px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 200px;
+	margin: 0 auto;
+}
+.dotted-arrow {
+	display: none;
 }
 
 
@@ -663,6 +723,57 @@ p.b2 {
 	    max-width: 200px;
 	    font-size: 18px;
 	}
+
+	/*HOW*/
+
+	.arrow {
+		display: none;
+	}
+	.how__row {
+	    flex-direction: column;
+	    align-items: center;
+	    margin: 0 0 20px;
+	}
+	.how {
+	    padding: 50px 0;
+	}
+	.how__title {
+	    margin: 0 0 40px 0;
+	}
+	.how__item-top {
+	    margin: 0 0 20px 0;
+	}
+	.how__item-bottom-title {
+	    margin: 0 0 15px 0;
+	}
+	.how__column {
+	    max-width: 400px;
+	    margin: 0 0 15px 0;
+	}
+	.dotted-arrow {
+		display: block;
+		margin: 0 0 25px 0;
+	}
+	.dotted-arrow-item {
+		position: relative;
+		width: 1px;
+	    margin: 0 auto;
+	    border-right: 2px dotted #76a1cc;
+	    min-height: 38px;
+	}
+	.dotted-arrow-item:after {
+		content: '';
+	    position: absolute;
+	    bottom: -12px;
+	    left: 50%;
+	    margin: 0 0 0 -6px;
+	    width: 0;
+	    height: 0;
+	    border-left: 7px solid transparent;
+	    border-right: 7px solid transparent;
+	    border-top: 25px solid #76a1cc;
+	    border-top: 10px solid #76a1cc;
+		}
 	
 }
 
@@ -676,5 +787,29 @@ p.b2 {
 @media (max-width: 400px) {
 	.about_img {
 	    display: none;
+	}
+	.h2title {
+	    font-size: 25px;
+	}
+	.subtitle {
+	    font-size: 18px;
+	}
+	.price {
+	    padding: 20px 0 30px 0;
+	}
+	.how {
+	    padding: 30px 0;
+	}
+	.how__title {
+	    margin: 0 0 25px 0;
+	}
+	.how__row {
+	    margin: 0 0 10px;
+	}
+	.services__title {
+	    margin: 0 0 20px 0;
+	}
+	.price__title {
+	    margin: 0 0 15px 0;
 	}
 }
